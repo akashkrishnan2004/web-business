@@ -5,7 +5,7 @@ import { ArrowUpRight, FolderOpen } from "lucide-react";
 import { projects } from "../Data/project";
 import ProjectCard from "../Components/ProjectCard";
 
-function Projects() {
+export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const categories = [
@@ -85,7 +85,7 @@ function Projects() {
                 className={`rounded-full border px-5 py-2.5 text-sm font-medium transition ${
                   activeCategory === category
                     ? "border-red-500 bg-red-500 text-white"
-                    : "border-white/10 bg-white/[0.03] text-zinc-400 hover:border-red-500/50 hover:text-white"
+                    : "border-white/10 bg-white/3 text-zinc-400 hover:border-red-500/50 hover:text-white"
                 }`}
               >
                 {category}
@@ -166,5 +166,3 @@ function Projects() {
     </main>
   );
 }
-
-export default Projects;

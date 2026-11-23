@@ -12,7 +12,7 @@ import {
 
 import { FaInstagram } from "react-icons/fa";
 
-function Contact() {
+export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -332,4 +332,3 @@ ${formData.message}
   );
 }
 
-export default Contact;

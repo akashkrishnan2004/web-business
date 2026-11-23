@@ -2,15 +2,9 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
-const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "Services", path: "/services" },
-  { name: "Projects", path: "/projects" },
-  { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" },
-];
+import { navLinks } from "../Data/Data";
 
-function Navbar() {
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -23,9 +17,9 @@ function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
+          {navLinks.map((link, index) => (
             <NavLink
-              key={link.path}
+              key={link.id}
               to={link.path}
               end={link.path === "/"}
               className={({ isActive }) =>
@@ -34,7 +28,7 @@ function Navbar() {
                 }`
               }
             >
-              {link.name}
+              {link.label}
             </NavLink>
           ))}
         </div>
@@ -73,7 +67,7 @@ function Navbar() {
                   `text-sm ${isActive ? "text-red-500" : "text-zinc-300"}`
                 }
               >
-                {link.name}
+                {link.label}
               </NavLink>
             ))}
           </div>
@@ -82,5 +76,3 @@ function Navbar() {
     </header>
   );
 }
-
-export default Navbar;

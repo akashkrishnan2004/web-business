@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { services } from "../Data/service";
 import ServiceCard from "../Components/ServiceCard";
 
-function Services() {
+export default function Services() {
   return (
     <main>
 
@@ -116,5 +116,3 @@ function Services() {
     </main>
   );
 }
-
-export default Services;

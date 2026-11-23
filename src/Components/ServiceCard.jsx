@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-function ServiceCard({ service }) {
+export default function ServiceCard({ service }) {
   const Icon = service.icon;
 
   return (
@@ -37,5 +37,3 @@ function ServiceCard({ service }) {
     </div>
   );
 }
-
-export default ServiceCard;

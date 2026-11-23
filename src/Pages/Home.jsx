@@ -16,8 +16,9 @@ import { projects } from "../Data/project";
 
 import ServiceCard from "../Components/ServiceCard";
 import ProjectCard from "../Components/ProjectCard";
+import { technologies } from "../Data/Data";
 
-function Home() {
+export default function Home() {
   return (
     <main className="overflow-hidden">
       {/* HERO SECTION */}
@@ -74,16 +75,10 @@ function Home() {
               </p>
 
               <div className="mt-5 flex flex-wrap gap-3">
-                {[
-                  "React",
-                  "JavaScript",
-                  "Node.js",
-                  "MongoDB",
-                  "Tailwind CSS",
-                ].map((tech) => (
+                {technologies.slice(0, 4).map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs text-zinc-400"
+                    className="rounded-full border border-white/10 bg-white/3 px-4 py-2 text-xs text-zinc-400"
                   >
                     {tech}
                   </span>
@@ -126,7 +121,7 @@ function Home() {
                 </p>
 
                 <div className="mt-10 grid grid-cols-2 gap-4">
-                  <div className="rounded-xl border border-white/10 bg-white/[0.03] p-5">
+                  <div className="rounded-xl border border-white/10 bg-white/3 p-5">
                     <Code2 className="text-red-500" size={25} />
                     <h3 className="mt-4 font-semibold text-white">
                       Development
@@ -136,7 +131,7 @@ function Home() {
                     </p>
                   </div>
 
-                  <div className="rounded-xl border border-white/10 bg-white/[0.03] p-5">
+                  <div className="rounded-xl border border-white/10 bg-white/3 p-5">
                     <Palette className="text-red-500" size={25} />
                     <h3 className="mt-4 font-semibold text-white">
                       Creative Design
@@ -410,4 +405,3 @@ function Home() {
   );
 }
 
-export default Home;

@@ -10,19 +10,10 @@ import {
 
 import { Link } from "react-router-dom";
 
-function About() {
-  const technologies = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "Tailwind CSS",
-    "Git",
-    "GitHub",
-  ];
+import { approach, technologies } from "../Data/Data";
+
+export default function About() {
+
 
   return (
     <main>
@@ -200,26 +191,7 @@ function About() {
 
           <div className="grid gap-7 md:grid-cols-3">
 
-            {[
-              {
-                icon: Lightbulb,
-                title: "Creative Thinking",
-                description:
-                  "We approach every project with fresh ideas and creative solutions.",
-              },
-              {
-                icon: Code2,
-                title: "Modern Technology",
-                description:
-                  "We use modern development tools and technologies to build websites.",
-              },
-              {
-                icon: Rocket,
-                title: "Continuous Improvement",
-                description:
-                  "We continuously learn, improve and refine our development process.",
-              },
-            ].map((item) => {
+            {approach.map((item) => {
               const Icon = item.icon;
 
               return (
@@ -248,7 +220,7 @@ function About() {
       </section>
 
       {/* FOUNDERS SECTION */}
-      <section className="bg-[#0e0e10] py-24">
+      {/* <section className="bg-[#0e0e10] py-24">
 
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
 
@@ -310,7 +282,7 @@ function About() {
 
         </div>
 
-      </section>
+      </section> */}
 
       {/* TECHNOLOGIES */}
       <section className="py-24">
@@ -370,5 +342,3 @@ function About() {
     </main>
   );
 }
-
-export default About;

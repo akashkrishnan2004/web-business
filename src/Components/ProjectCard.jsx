@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 
-function ProjectCard({ project }) {
+
+export default function ProjectCard({ project }) {
   return (
     <div className="group overflow-hidden rounded-2xl border border-white/10 bg-[#111113]">
 
@@ -51,5 +52,3 @@ function ProjectCard({ project }) {
     </div>
   );
 }
-
-export default ProjectCard;
