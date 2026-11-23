@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import { services } from "../data/services";
+import { services } from "../Data/service";
 import ServiceCard from "../components/ServiceCard";
 
 function Services() {

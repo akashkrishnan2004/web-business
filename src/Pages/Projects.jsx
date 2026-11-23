@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, FolderOpen } from "lucide-react";
 
-import { projects } from "../data/projects";
+import { projects } from "../Data/project";
 import ProjectCard from "../Components/ProjectCard";
 
 function Projects() {

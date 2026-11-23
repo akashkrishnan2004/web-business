@@ -11,8 +11,8 @@ import {
   Sparkles,
 } from "lucide-react";
 
-import { services } from "../data/services";
-import { projects } from "../data/projects";
+import { services } from "../Data/service";
+import { projects } from "../Data/project";
 
 import ServiceCard from "../Components/ServiceCard";
 import ProjectCard from "../Components/ProjectCard";
