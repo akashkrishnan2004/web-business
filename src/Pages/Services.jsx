@@ -3,7 +3,7 @@ import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import { services } from "../Data/service";
-import ServiceCard from "../components/ServiceCard";
+import ServiceCard from "../Components/ServiceCard";
 
 function Services() {
   return (
